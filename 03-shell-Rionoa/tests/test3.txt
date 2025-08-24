@@ -1,0 +1,9 @@
+sleep 5 & sleep 6 &
+jobs
+fg 2
+ls
+sleep 10 & jobs
+fg
+history
+jobs
+sleep 5 & wait

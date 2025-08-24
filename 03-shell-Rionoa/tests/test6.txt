@@ -1,0 +1,11 @@
+date ; pwd ; ls
+
+sleep 5 & sleep 6 &
+jobs
+fg 1
+history ; date
+./hello_name < infile
+sleep 3 & wait
+sleep 5 & fg
+echo I Love Programming
+exit

@@ -1,0 +1,5 @@
+./hello_name < infile
+./hello > outfile
+cat outfile
+history
+exit
