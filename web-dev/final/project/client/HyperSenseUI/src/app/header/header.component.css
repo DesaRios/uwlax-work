@@ -1,0 +1,39 @@
+.bold-italic {
+    font-weight: bold;
+  }
+
+  .stuck {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar-nav.ml-auto {
+    margin-left: auto ;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+.middle {
+  margin-left: 100px;
+  background-color: rgb(82, 82, 82);
+  border-color: rgb(51, 51, 51);
+  border-style: ridge;
+}
+
+.middle-li {
+  color: white;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.dropdown {
+  margin-right: 50px;
+}
+
+
+

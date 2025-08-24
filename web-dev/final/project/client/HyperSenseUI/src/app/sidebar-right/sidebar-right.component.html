@@ -1,0 +1,8 @@
+<div class="sidebar-right">
+    <h3 class="sidebar-title">Goals</h3>
+    <ul class="list-group" *ngIf="user && user.goals">
+      <li class="list-group-item" *ngFor="let goal of user.goals; index as i"><span class="workoutName">{{ goal.workoutName }}:</span> {{goal.weight}} X {{goal.reps}}
+        <button class="delete-button" (click)="deleteGoal(i)">Delete</button>
+    </li>
+    </ul>
+  </div>

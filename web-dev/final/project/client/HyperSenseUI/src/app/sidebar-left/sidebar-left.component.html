@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <h3 class="sidebar-title">Data</h3>
+    <ul class="list-group" *ngIf="user">
+      <li class="list-group-item"><span class="datatype">Username:</span> {{ user.username }}</li>
+      <li class="list-group-item"><span class="datatype">Height:</span> {{ user.height }}''</li>
+      <li class="list-group-item"><span class="datatype">Weight:</span> {{ user.weight }}lbs</li>
+      <li class="list-group-item"><span class="datatype">Age:</span> {{ user.age }} years</li>
+    </ul>
+  </div>

@@ -1,0 +1,124 @@
+
+body {
+    display: flex;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+    width: 70%;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+
+
+  .container {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    width: 50%; /* Adjust this to change the width */
+    color: black;
+    background: linear-gradient(to right, rgb(151, 144, 144), rgb(214, 214, 214));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(179, 179, 179);
+    border-style:groove;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+
+li {
+    list-style-type: none; /* Remove the bullet point */
+    padding-left: 0; /* Take up the space where the bullet point was */
+    background-color: black;
+    color: white; /* Set the text color to white so it's visible on the black background */
+    padding: 10px;
+    text-align: center;
+    border-color: rgb(151, 144, 144);
+    border-style: groove;
+}
+
+.ilInner {
+    list-style-type: none; /* Remove the bullet point */
+    padding-left: 0; /* Take up the space where the bullet point was */
+    background-color: rgb(29, 29, 29);
+    color: white; /* Set the text color to white so it's visible on the black background */
+    padding: 10px;
+    text-align: center;
+    border-color: rgb(151, 144, 144);
+    border-style: groove;
+}
+
+h4 {
+    background-color: rgb(136, 29, 29);
+    border-color: rgb(179, 179, 179);
+    border-style:groove;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px
+}
+
+.set-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5474dd; /* Red */
+}
+
+.session-date {
+    font-size: 0.8em; /* Adjust as needed */
+    float: right;
+    margin-right: 10px;
+  
+}
+
+.session-name {
+    font-size: 0.8em; /* Adjust as needed */
+    float: left;
+    margin-left: 10px;
+}

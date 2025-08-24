@@ -1,0 +1,27 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+    <div class="main-content" *ngIf="user">
+    <div class="header-container">
+        <button class="back-button" routerLink="/dashboard/routines">Back</button>
+        <h2>Routines</h2>
+        <div class="spacer"></div> <!-- Empty div to balance the Back button -->
+    </div>
+    <form [formGroup]="routineForm" (ngSubmit)="onSubmit()">
+        <label class="routine-name">
+          <input formControlName="name" maxLength="20" placeholder="Enter routine name">
+        </label>
+        <div formArrayName="workouts">
+          <div *ngFor="let workout of workouts.controls; index as i" class="workout">
+            <label>
+              <span class="workout-number">Workout {{ i + 1 }}: </span>
+              <span>{{ workout.value.name }}</span>
+            </label>
+          </div>
+        </div>
+        <div class="submit-div">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+      </form>
+</div>
+<app-workout-sidebar (workoutAdded)="addWorkout($event)"></app-workout-sidebar>

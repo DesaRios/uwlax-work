@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <div class="header-container">
+      <h2>User Email</h2>
+    </div>
+    <ul class="list-group" *ngIf="user">
+        <li class="list-group-item">
+          <span class="userEmail">{{ user.email }}</span>
+        </li>
+      </ul>
+
+      <div class="header-container">
+        <h2>Change Password</h2>
+      </div>
+      <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
+        <div class="form-group">
+          <label for="currentPassword">Current Password</label>
+          <input type="password" id="currentPassword" class="form-control" formControlName="currentPassword">
+        </div>
+        <div class="form-group">
+          <label for="newPassword">New Password</label>
+          <input type="password" id="newPassword" class="form-control" formControlName="newPassword">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm New Password</label>
+          <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="changePasswordForm.invalid">Change Password</button>
+      </form>
+</div>
+<app-sidebar-right></app-sidebar-right>

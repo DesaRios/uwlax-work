@@ -1,0 +1,62 @@
+
+  
+  .container {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+  }
+  
+
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+  
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background: linear-gradient(to right, rgb(221, 134, 134), rgb(214, 214, 214));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+  }
+
+  h2 {
+    margin-top: 80px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background: linear-gradient(to right, rgb(172, 172, 172), rgb(62, 126, 223));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+  }
+
+  .center-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 3px;
+    width: 100px;
+    background-color: rgb(187, 54, 54);
+    border-color: rgb(112, 97, 97);
+  }
+
+  .goal-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 3px;
+    width: 100px;
+    background-color: rgb(70, 104, 214);
+    border-color: rgb(112, 97, 97);
+  }
+
+  
+
+  

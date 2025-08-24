@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <div class="header-container">
+        <button class="users-button" routerLink="/admin/users">Users</button>
+        <h2>Admin Controls</h2>
+        <button class="workouts-button" routerLink="/admin/workouts">Workouts</button>
+    </div>
+    <button class="create-button" (click)="openForm()">Create New Workout</button>
+    <div class="header">
+        Workouts
+    </div>
+    <ul class="list-group" *ngIf="workouts">
+        <li class="list-group-item" *ngFor="let workout of workouts; index as i">
+          <span class="workoutName">{{ workout.name }}</span>
+          <button class="delete-button" (click)="onDelete(i)">Delete</button> 
+        </li>
+      </ul>
+  </div>
+  <app-sidebar-right></app-sidebar-right>
+</div>

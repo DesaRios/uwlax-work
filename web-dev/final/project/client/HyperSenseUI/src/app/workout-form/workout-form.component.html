@@ -1,0 +1,12 @@
+<div class="form-container">
+    <form [formGroup]="workoutForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Workout Name:</label>
+        <input id="name" type="text" formControlName="name" required>
+      </div>
+      <!-- Add more fields as needed -->
+      <div class="form-group">
+        <button type="submit" [disabled]="workoutForm.invalid">Submit</button>
+      </div>
+    </form>
+  </div>

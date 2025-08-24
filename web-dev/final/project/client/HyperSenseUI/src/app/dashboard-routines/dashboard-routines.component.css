@@ -1,0 +1,118 @@
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    width: 50%; /* Adjust this to change the width */
+    color: black;
+    background: linear-gradient(to right, rgb(151, 144, 144), rgb(214, 214, 214));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-routine-button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.new-routine-button:hover {
+    background-color: #5480dd; /* Red */
+}
+
+.start-button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+
+}
+
+.start-button:hover {
+    background-color: #dd5454; /* Red */
+}
+
+button.start-button:disabled {
+    background-color: grey; /* replace with your preferred color */
+  }
+
+h3 {
+    background-color: rgb(57, 68, 218);
+    border-color: rgb(141, 154, 233);
+    border-style:groove;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li {
+    list-style-type: none; /* Remove the bullet point */
+    padding-left: 0; /* Take up the space where the bullet point was */
+    background-color: black;
+    color: white; /* Set the text color to white so it's visible on the black background */
+    padding: 10px;
+    text-align: center;
+    border-color: rgb(151, 144, 144);
+    border-style: groove;
+}
+
+.spacer {
+    padding: 20px;
+    width: 100px;
+}
+
+h3:not(.selected):hover {
+    background-color: blue; /* replace with your preferred color */
+}
+
+.selected {
+    background-color: rgb(253, 73, 73); /* replace with your preferred color */
+}  
+.delete-button {
+    padding: 5px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.delete-button:hover {
+    background-color: #dd5454;
+}
+
+button.delete-button:disabled {
+    background-color: grey; /* replace with your preferred color */
+  }
+
+.delete-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }

@@ -1,0 +1,43 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <h1>Specimen {{user.username}}</h1>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" [(ngModel)]="user.username" name="username" id="username" class="form-control" placeholder="Enter username" required maxlength="12">
+      </div>
+      <div class="form-group">
+        <label for="height">Height(inches)</label>
+        <input type="number" [(ngModel)]="user.height" name="height" id="height" class="form-control" placeholder="Enter height in inches" required>
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight(lbs)</label>
+        <input type="number" [(ngModel)]="user.weight" name="weight" id="weight" class="form-control" placeholder="Enter weight in lbs" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age(years)</label>
+        <input type="number" [(ngModel)]="user.age" name="age" id="age" class="form-control" placeholder="Enter age" required>
+      </div>
+      <button type="submit" class="btn btn-primary center-button" [disabled]="!userForm.valid">Update</button>
+    </form>
+    <h2>Set a goal</h2>
+    <form #goalForm="ngForm" (ngSubmit)="onSubmitGoal(goalForm.value)" *ngIf="goal">
+        <div class="form-group">
+          <label for="workoutName">Workout Name</label>
+          <input type="text" [(ngModel)]="goal.workoutName" name="workoutName" id="workoutName" class="form-control" placeholder="Enter workout name" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight(lbs)</label>
+            <input type="number" [(ngModel)]="goal.weight" name="weight" id="weight" class="form-control" placeholder="Enter weight in lbs" required>
+          </div>
+        <div class="form-group">
+          <label for="reps">Reps</label>
+          <input type="number" [(ngModel)]="goal.reps" name="reps" id="reps" class="form-control" placeholder="Enter reps" required>
+        </div>
+        <button type="submit" class="btn btn-primary goal-button" [disabled]="!goalForm.valid">Set Goal</button>
+    </form>
+  </div>
+  <app-sidebar-right></app-sidebar-right>
+</div>

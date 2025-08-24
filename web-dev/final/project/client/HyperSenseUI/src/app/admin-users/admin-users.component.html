@@ -1,0 +1,25 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+    <div class="main-content" *ngIf="user">
+        <div class="header-container">
+            <button class="users-button" routerLink="/admin/users">Users</button>
+            <h2>Admin Controls</h2>
+            <button class="workouts-button" routerLink="/admin/workouts">Workouts</button>
+        </div>
+        <div class="pagination">
+          <label for="page-input">Page</label>
+          <input class="page-input" type="number" [(ngModel)]="inputPage" (ngModelChange)="goToPage()" min="1" max="{{totalPages}}">
+          <span>of {{totalPages}}</span>
+        </div>
+        <div class="header">
+           Users
+        </div>
+        <ul class="list-group" *ngIf="users">
+            <li class="list-group-item" *ngFor="let user of displayedUsers; index as i">
+              <span class="userEmail">{{ user.email }}</span>
+            </li>
+          </ul>
+    </div>
+    <app-sidebar-right></app-sidebar-right>
+</div>

@@ -1,0 +1,12 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <div class="header-container">
+        <button class="users-button" routerLink="/admin/users">Users</button>
+        <h2>Admin Controls</h2>
+        <button class="workouts-button" routerLink="/admin/workouts">Workouts</button>
+      </div>
+  </div>
+  <app-sidebar-right></app-sidebar-right>
+</div>

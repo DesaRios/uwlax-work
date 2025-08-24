@@ -1,0 +1,101 @@
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    width: 50%; /* Adjust this to change the width */
+    color: black;
+    background: linear-gradient(to right, rgb(151, 144, 144), rgb(214, 214, 214));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+
+}
+
+button:hover {
+    background-color: #dd5454; /* Red */
+}
+
+.list-group-item {
+    color: rgb(255, 255, 255); /* Change the text color to blue */
+    background-color: rgb(201, 61, 61); /* Change the background color to light gray */
+    border-color: rgb(83, 83, 83);
+    text-align: center;
+    border-radius: 0px;
+    border-style: groove;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* Add more styles as needed */
+}
+
+.datatype {
+    font-weight: bold; /* Change the font to Courier New */
+    /* Add more styles as needed */
+}
+
+.workoutName {
+    font-weight: bold;
+}
+
+.header {
+    color: rgb(255, 255, 255); /* Change the text color to blue */
+    border-style: groove;
+    background-color: rgb(68, 68, 68); /* Change the background color to light gray */
+    border-color: rgb(126, 124, 124);
+    text-align: center; /* Center the text */
+    border-radius: 0px;
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .delete-button {
+    background-color: #5e5e5e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .create-button {
+    display: block;
+    width: 50%; /* Adjust this to make the button as wide as you want */
+    margin: 0 auto; /* This will center the button */
+    margin-top: 30px
+  }

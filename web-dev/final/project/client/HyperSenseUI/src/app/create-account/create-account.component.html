@@ -1,0 +1,42 @@
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+<div class="login-page">
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="row">
+      <div class="col-12 col-md-12">
+        <div class="title-box">
+          <h2 class="text-center">HyperSense</h2>
+        </div>
+        <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input type="text" [(ngModel)]="username" name="username" class="form-control" id="inputText" placeholder="Enter username"  maxlength="12">
+            </div>
+          <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" [(ngModel)]="email" name="userEmail" class="form-control" id="inputEmail" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" [(ngModel)]="password" name="userPassword" class="form-control" id="inputPassword" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Re-Enter Password</label>
+            <input type="password" [(ngModel)]="rePassword" name="userRePassword" class="form-control" id="inputPassword" placeholder="Password" required>
+          </div>
+          <div class="form-group text-center">
+            <div>
+              <button type="submit" class="btn btn-primary loginButton mt-3 mb-2" [disabled]="!myForm.valid">Create Account</button>
+            </div>
+            <div>
+              <button type="button" class="btn createButton btn-secondary" routerLink="/login">Back to Login</button>
+            </div>
+          </div>
+        </form>
+        <div class="text-section text-center mt-5">
+            <p>“The successful warrior is the average man with laser-like focus” - Bruce Lee</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <div class="header-container">
+      <button class="start-button" [disabled]="!selectedRoutine" (click)="startSession()">Start</button>
+      <h2>Routines</h2>
+      <button class="new-routine-button" routerLink="/dashboard/routines/new">New</button>
+    </div>
+    <div class="delete-button-container">
+      <button class="delete-button " [disabled]="!selectedRoutine" (click)="deleteRoutine()">Delete</button>
+    </div>
+    <div class="spacer"></div>
+    <div *ngIf="routines">
+      <div *ngFor="let routine of routines">
+        <h3 [class.selected]="selectedRoutine === routine" (click)="selectedRoutine = routine">{{ routine.name }}</h3>
+        <ul>
+          <li *ngFor="let workout of routine.workouts">
+            {{ workout.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-sidebar-right></app-sidebar-right>
+</div>

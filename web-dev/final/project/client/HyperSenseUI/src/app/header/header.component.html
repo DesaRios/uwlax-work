@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light stuck">
+  <a class="navbar-brand bold-italic" routerLink="/dashboard">HyperSense</a>
+  <div class="collapse navbar-collapse" id="navbarNav" *ngIf="user">
+    <ul class="navbar-nav mr-auto justify-content-center middle" style="flex-grow: .5;">
+      <li class="nav-item">
+        <a class="nav-link middle-li" routerLink="/dashboard/history" routerLinkActive="active-link">Session History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link middle-li" routerLink="/dashboard/routines" routerLinkActive="active-link">Routines</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link middle-li" routerLink="/dashboard/current" routerLinkActive="active-link">Current Session</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item admin-link" [ngStyle]="{'visibility': user.admin ? 'visible' : 'hidden'}">
+        <a class="nav-link admin-link" routerLink="/admin" routerLinkActive="active-link">Admin</a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="user">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i> {{ user.username }}
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/user-settings">User Settings</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

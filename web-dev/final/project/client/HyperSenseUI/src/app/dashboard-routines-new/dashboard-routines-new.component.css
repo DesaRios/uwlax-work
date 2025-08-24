@@ -1,0 +1,101 @@
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    width: 50%; /* Adjust this to change the width */
+    color: black;
+    background: linear-gradient(to right, rgb(151, 144, 144), rgb(214, 214, 214));
+    padding: 10px;
+    border-color: rgb(53, 53, 53);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spacer {
+    padding: 10px;
+    width: 100px;
+}
+
+.back-button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+
+}
+
+.back-button:hover {
+    background-color: #dd5454; /* Red */
+}
+
+.routine-name {
+    background-color: rgb(57, 68, 218);
+    border-color: rgb(141, 154, 233);
+    border-style:groove
+  }
+
+  .routine-name input {
+    background-color: rgb(57, 68, 218);
+    color: white; /* Set the text color to white so it's visible on the blue background */
+    border: none; /* Remove the default border */
+    padding: 10px; /* Add some padding */
+    text-align: center; /* Center the text */
+    font-weight: bold;
+    font-size:large
+  }
+
+  .routine-name input:focus {
+    outline: none;
+  }
+  
+  .workout {
+    background-color: black;
+    color: white; /* Set the text color to white so it's visible on the black background */
+    padding: 10px;
+    text-align: center;
+    border-color: rgb(151, 144, 144);
+    border-style: groove;
+  }
+
+  .routine-name, .workout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .submit-div {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .submit-button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .submit-button:hover {
+    background-color: #5972df; /* Red */
+}
+

@@ -1,0 +1,35 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user">
+    <div class="header-container">
+        <h2>Session History</h2>
+        <input type="text" (input)="search($event)" placeholder="Search sessions">
+      </div>
+      <div *ngFor="let session of reversedPastSessions" (click)="selectSession(session)">
+        <button class="back-button" *ngIf="selectedSession === session" (click)="exitDetailedView($event)">Back</button>
+       <h3>{{ session.name }} <span class="session-date">{{ session.date | date:'MM/dd/yyyy' }}</span></h3>
+        <div *ngIf="selectedSession === session">
+      <!-- Add more details about each session here -->
+      <ul>
+        <li *ngFor="let workout of session.workouts; let i = index">
+            <h4>{{ workout.name }}</h4>
+          <div class="set-details ilInner header">
+              <p>Set</p>
+              <p>Reps</p>
+              <p>Weight</p>
+            </div>
+          <ul>
+            <li *ngFor="let set of session.workoutArray[i]" class="ilInner">
+              <div class="set-details">
+                  <p>{{ set.set }}</p>
+                  <p>{{set.reps}}</p>
+                    <p>{{set.weight}}</p>
+                </div>
+            </li>
+          </ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-sidebar-right></app-sidebar-right>

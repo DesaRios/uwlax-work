@@ -1,0 +1,9 @@
+<div class="sidebar-right">
+    <h3 class="sidebar-title">Workouts</h3>
+    <input type="text" class="search-bar" (input)="search($event)" placeholder="Search workouts">
+    <ul class="list-group" *ngIf="workouts">
+      <li class="list-group-item" *ngFor="let workout of workouts; index as i"><span class="workoutName">{{ workout.name }}</span>
+        <button class="add-button" (click)="addWorkout(i)">+</button>
+    </li>
+    </ul>
+  </div>

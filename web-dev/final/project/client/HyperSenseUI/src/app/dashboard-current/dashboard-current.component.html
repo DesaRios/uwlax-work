@@ -1,0 +1,43 @@
+<app-header></app-header>
+<app-sidebar-left></app-sidebar-left>
+<div class="container">
+  <div class="main-content" *ngIf="user && currentSession">
+    <div class="header-container">
+        <button (click)="endCurrentSession()" style="float: right;">End</button>
+      <h2>Current Session</h2>
+      <button (click)="saveCurrentSession()" style="float: right;">Update</button>
+    </div>
+    <!-- User session content goes here -->
+    <h3>{{currentSession.name }}</h3>
+    <ul>
+      <li *ngFor="let workout of currentSession.workouts; let i = index">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h4>{{ workout.name }}</h4>
+            <button class="play-button" (click)="searchWorkoutVideos(workout.name)">Videos</button>
+          </div>
+        <div class="set-details ilInner header">
+            <p>Set</p>
+            <p>Reps</p>
+            <p>Weight</p>
+          </div>
+        <ul>
+          <li *ngFor="let set of currentSession.workoutArray[i]" class="ilInner">
+            <div class="set-details">
+                <p>{{ set.set }}</p>
+                <p><input [(ngModel)]="set.reps" type="number" min="0"></p>
+                <p><input [(ngModel)]="set.weight" type="number" min="0"></p>
+              </div>
+          </li>
+        </ul>
+        <!-- Videos for each workout -->
+        <div *ngIf="selectedWorkout && selectedWorkout.name === workout.name">
+            <div *ngFor="let video of selectedWorkout.videos">
+              <iframe width="560" height="315" [src]="getSafeUrl(video.videoId)" frameborder="0" allowfullscreen style="width: 100%; max-width: 560px;"></iframe>
+            </div>
+          </div>
+          <button *ngIf="selectedWorkout && selectedWorkout.name === workout.name" (click)="hideVideos()">Hide</button>
+      </li>
+    </ul>
+  </div>
+  <app-sidebar-right></app-sidebar-right>
+</div>

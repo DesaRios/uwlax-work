@@ -1,0 +1,50 @@
+.sidebar-right {
+    width: 15%;
+    position: fixed;
+    right: 0; /* Position the sidebar on the right side of the page */
+    height: 100%;
+    border: 1px solid #000; /* Add a border */
+    background-color: rgb(68, 68, 68);
+    /* Add more styles as needed */
+  }
+
+  .sidebar-title {
+    padding: 10px;
+    text-align: center;
+    background-color: #5d72e7; /* Add a light red background */
+    color: white; /* Make the text white */
+    /* Add more styles as needed */
+    }
+
+    .list-group-item {
+        color: rgb(255, 255, 255); /* Change the text color to blue */
+        background-color: rgb(68, 68, 68); /* Change the background color to light gray */
+        border-color: rgb(68, 68, 68);
+        /* Add more styles as needed */
+    }
+
+    .datatype {
+        font-weight: bold; /* Change the font to Courier New */
+        /* Add more styles as needed */
+    }
+
+    .workoutName {
+        font-weight: bold;
+    }
+
+    .delete-button {
+        background-color: #7e7e7e; /* Red */
+        border-radius: 3px;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .delete-button:hover {
+        background-color: #b42c23; /* Red */
+      }

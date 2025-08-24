@@ -1,0 +1,36 @@
+.login-page {
+    background-color: rgb(37, 37, 37);
+}
+
+label {
+    color: white;
+
+}
+
+.title-box {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.text-section {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    color: white;
+}
+
+.loginButton {
+    width: 200px;
+    background-color: rgb(238, 19, 19);
+    border-radius: 5%;
+}
+
+.createButton {
+    width: 150px;
+    background-color: rgb(78, 114, 221);
+    border-radius: 5%;
+}
+
