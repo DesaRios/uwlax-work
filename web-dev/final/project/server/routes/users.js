@@ -7,7 +7,7 @@ const session = require('express-session');
 
 // Use express-session middleware
 router.use(session({
-  secret: 'your secret key',
+  secret: 'supersecretkey',
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false } // Use secure cookies in production (HTTPS)
